@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1g6-Sw-P9w">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dog Days-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dog_Days" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nif-ZC-OE2">
+                                <rect key="frame" x="0.0" y="170" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Nif-ZC-OE2" secondAttribute="height" multiplier="1:1" id="GBj-0u-28V"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog of the Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ko-M7-6J7">
+                                <rect key="frame" x="0.0" y="89" width="375" height="73"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNJ-BZ-igS">
+                                <rect key="frame" x="16" y="604" width="343" height="48"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hNJ-BZ-igS" secondAttribute="trailing" id="5tE-pO-qXP"/>
+                            <constraint firstItem="hNJ-BZ-igS" firstAttribute="top" secondItem="Nif-ZC-OE2" secondAttribute="bottom" constant="59" id="FuK-LJ-g6g"/>
+                            <constraint firstAttribute="trailing" secondItem="4ko-M7-6J7" secondAttribute="trailing" id="G8n-X3-YDc"/>
+                            <constraint firstItem="Nif-ZC-OE2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GRH-dr-cYr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hNJ-BZ-igS" secondAttribute="bottom" constant="15" id="LAk-qV-W3Y"/>
+                            <constraint firstItem="Nif-ZC-OE2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="24" id="PKv-eR-kau"/>
+                            <constraint firstItem="Nif-ZC-OE2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TFr-rG-i8a"/>
+                            <constraint firstItem="4ko-M7-6J7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UBa-b9-od2"/>
+                            <constraint firstItem="Nif-ZC-OE2" firstAttribute="top" secondItem="4ko-M7-6J7" secondAttribute="bottom" constant="8" id="XRU-nr-BUO"/>
+                            <constraint firstItem="hNJ-BZ-igS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YE4-85-sfd"/>
+                            <constraint firstAttribute="trailing" secondItem="Nif-ZC-OE2" secondAttribute="trailing" id="cgW-Th-7rx"/>
+                            <constraint firstItem="4ko-M7-6J7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="uIw-PK-zQN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dog Days" id="U1l-RO-5C9">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="M0M-NJ-sap">
+                            <connections>
+                                <action selector="logoutButtonTapped:" destination="BYZ-38-t0r" id="oXS-SV-oHt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="Tiw-d7-8s1">
+                            <connections>
+                                <segue destination="F9c-Cq-Ycn" kind="show" id="QWs-dI-wrP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="hNJ-BZ-igS" id="hmF-tb-czW"/>
+                        <outlet property="imageView" destination="Nif-ZC-OE2" id="svd-6u-FEn"/>
+                        <outlet property="logoutButton" destination="M0M-NJ-sap" id="9WE-CA-Zxw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015.2" y="-40.929535232383813"/>
+        </scene>
+        <!--Submit a Dog-->
+        <scene sceneID="hBz-v8-lqx">
+            <objects>
+                <viewController id="F9c-Cq-Ycn" customClass="ViewController" customModule="Dog_Days" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jLE-tt-M5s"/>
+                        <viewControllerLayoutGuide type="bottom" id="wph-A1-0Uw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OPF-ma-QLd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Lbs-iE-eo5">
+                                <rect key="frame" x="16" y="122" width="343" height="235.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="IHa-8n-hLm">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Submit a photo." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAw-PN-3no">
+                                                <rect key="frame" x="0.0" y="6" width="121" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vR9-rv-a48">
+                                                <rect key="frame" x="161" y="0.0" width="182" height="32"/>
+                                                <color key="backgroundColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Upload">
+                                                    <color key="titleColor" red="0.011923936195671558" green="0.47466540336608887" blue="0.98470920324325562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected" title="File Uploaded"/>
+                                                <connections>
+                                                    <action selector="uploadButtonTapped:" destination="F9c-Cq-Ycn" eventType="touchUpInside" id="BFC-Ht-JM4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pk3-8N-f0a">
+                                        <rect key="frame" x="0.0" y="52" width="343" height="183.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a description." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFj-y9-QPW">
+                                                <rect key="frame" x="0.0" y="0.0" width="139" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B9S-mt-HFX">
+                                                <rect key="frame" x="0.0" y="37.5" width="343" height="146"/>
+                                                <color key="backgroundColor" red="0.97467877538071068" green="0.97467877538071068" blue="0.97467877538071068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="B9S-mt-HFX" firstAttribute="leading" secondItem="Pk3-8N-f0a" secondAttribute="leading" id="0Rl-DZ-cux"/>
+                                            <constraint firstAttribute="trailing" secondItem="B9S-mt-HFX" secondAttribute="trailing" id="QUc-h4-V7o"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IHa-8n-hLm" secondAttribute="trailing" id="3TD-d5-MDJ"/>
+                                    <constraint firstAttribute="height" constant="235.5" id="dTM-q9-agI"/>
+                                    <constraint firstItem="IHa-8n-hLm" firstAttribute="leading" secondItem="Lbs-iE-eo5" secondAttribute="leading" id="skB-ZE-bs4"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wkP-iA-RHq">
+                                <rect key="frame" x="150.5" y="436.5" width="74" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="WCX-Gh-g4N"/>
+                                    <constraint firstAttribute="width" constant="74" id="ajf-P5-RH0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkV-qX-y4b">
+                                <rect key="frame" x="16" y="581" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="F9c-Cq-Ycn" eventType="touchUpInside" id="pXc-E6-o7P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wkP-iA-RHq" firstAttribute="centerY" secondItem="OPF-ma-QLd" secondAttribute="centerY" constant="140" id="2SB-n5-xgM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jkV-qX-y4b" secondAttribute="trailing" id="5ea-GQ-vy5"/>
+                            <constraint firstItem="Lbs-iE-eo5" firstAttribute="top" secondItem="jLE-tt-M5s" secondAttribute="bottom" constant="58" id="Aeu-NA-fQF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lbs-iE-eo5" secondAttribute="trailing" id="SEV-bm-wHk"/>
+                            <constraint firstItem="Lbs-iE-eo5" firstAttribute="leading" secondItem="OPF-ma-QLd" secondAttribute="leadingMargin" id="bdM-pw-W3V"/>
+                            <constraint firstItem="wkP-iA-RHq" firstAttribute="centerX" secondItem="OPF-ma-QLd" secondAttribute="centerX" id="gmR-iF-GIx"/>
+                            <constraint firstItem="jkV-qX-y4b" firstAttribute="top" secondItem="wkP-iA-RHq" secondAttribute="bottom" constant="70.5" id="jSA-vP-92U"/>
+                            <constraint firstItem="jkV-qX-y4b" firstAttribute="leading" secondItem="OPF-ma-QLd" secondAttribute="leadingMargin" id="oTC-5R-AtV"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Submit a Dog" id="0fV-JG-y2Q"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="descriptionText" destination="B9S-mt-HFX" id="xL4-Ml-a77"/>
+                        <outlet property="imagePreview" destination="wkP-iA-RHq" id="8Qh-X9-R3q"/>
+                        <outlet property="submitButton" destination="jkV-qX-y4b" id="khE-PN-8s0"/>
+                        <outlet property="uploadButton" destination="vR9-rv-a48" id="rKa-kw-dMs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZQ-DD-AN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.7971014492755" y="-39.130434782608695"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W2E-vd-Ib7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1g6-Sw-P9w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mvb-vv-GQ8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CK4-qV-PcF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhx-v7-OP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="-38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>
